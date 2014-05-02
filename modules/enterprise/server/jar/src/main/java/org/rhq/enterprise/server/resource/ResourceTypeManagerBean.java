@@ -431,7 +431,7 @@ public class ResourceTypeManagerBean implements ResourceTypeManagerLocal, Resour
         Query templateCountQuery = entityManager.createNamedQuery(ResourceType.FIND_ALL_TEMPLATE_COUNT_COMPOSITES);
 
         @SuppressWarnings("unchecked")
-        List<ResourceTypeTemplateCountComposite> results = (List<ResourceTypeTemplateCountComposite>) templateCountQuery
+        List<ResourceTypeTemplateCountComposite> results = templateCountQuery
             .getResultList();
 
         for (ResourceTypeTemplateCountComposite result : results) {
@@ -465,7 +465,6 @@ public class ResourceTypeManagerBean implements ResourceTypeManagerLocal, Resour
         type.setResourceTypeBundleConfiguration(null);
         type.setBundleType(null);
         type.setChildResourceTypes(null);
-        type.setChildSubCategories(null);
         type.setClassLoaderType(null);
         type.setEventDefinitions(null);
         type.setMetricDefinitions(null);
