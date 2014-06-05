@@ -825,6 +825,9 @@
                 <c:simple-property name="url" displayName="Location url" type="string" default="" readOnly="true"/>    
                 <c:simple-property name="handler" displayName="Location handler" type="string" default="" readOnly="true"/>            
             </plugin-configuration>
+            
+	        <service name="Balancer" class="ApacheBalancerComponent"  discovery="ApacheBalancerDiscoveryComponent" createDeletePolicy="neither" singleton="false">
+	        </service>   
          </service>
 
       </service>
