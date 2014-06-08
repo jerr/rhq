@@ -34,15 +34,15 @@ import org.rhq.core.pluginapi.inventory.ResourceContext;
 import org.rhq.core.pluginapi.measurement.MeasurementFacet;
 
 /**
- * Represents workers of an Apache balancer-manager handler in Apache configuration &lt;Location&gt; section.
+ * Represents balancer menbers of an Apache balancer-manager handler in Apache configuration &lt;Location&gt; section.
  * 
  * @author Jeremie Lagarde
  */
-public class ApacheBalancerComponent implements ResourceComponent<ApacheBalancerComponent>, MeasurementFacet {
+public class ApacheBalancerMemberComponent implements ResourceComponent<ApacheLocationComponent>, MeasurementFacet {
 
-    ResourceContext<ApacheBalancerComponent> resourceContext;
+    ResourceContext<ApacheLocationComponent> resourceContext;
 
-    public void start(ResourceContext<ApacheBalancerComponent> context) throws InvalidPluginConfigurationException,
+    public void start(ResourceContext<ApacheLocationComponent> context) throws InvalidPluginConfigurationException,
         Exception {
         resourceContext = context;
     }

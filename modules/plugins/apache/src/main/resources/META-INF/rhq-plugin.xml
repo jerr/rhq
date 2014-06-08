@@ -827,6 +827,8 @@
             </plugin-configuration>
             
 	        <service name="Balancer" class="ApacheBalancerComponent"  discovery="ApacheBalancerDiscoveryComponent" createDeletePolicy="neither" singleton="false">
+		        <service name="Member" class="ApacheBalancerMemberComponent"  discovery="ApacheBalancerMemberDiscoveryComponent" createDeletePolicy="neither" singleton="false">
+		        </service>   
 	        </service>   
          </service>
 
